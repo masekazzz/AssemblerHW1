@@ -22,3 +22,10 @@
 
 ### 5 тест 16 / 5
 ![](https://i.ibb.co/yS30LTr/image.png)
+
+
+## 2 Программа
+![](https://i.ibb.co/2gyhNYd/image.png)
+
+### Результат выполнения
+![](https://i.ibb.co/FJRTSGg/image.png)
