@@ -43,4 +43,13 @@
 ![](https://i.ibb.co/xq91BsP/image.png)
 
 
-## 4 Программа
+## 4 Программа (Побитовый сдвиг числа на 2 влево или вправо)
+![](https://i.ibb.co/Wv2gYXC/image.png)
+![](https://i.ibb.co/z7SWJm5/image.png)
+![](https://i.ibb.co/NCRgtg1/image.png)
+
+### 1 Тест (12 l) 
+![](https://i.ibb.co/VBxVw7H/image.png)
+
+### 2 Тест (12 r)
+![](https://i.ibb.co/W3Vf65p/image.png)
