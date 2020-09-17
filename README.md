@@ -59,3 +59,14 @@
 
 ### 4 Тест (12444 r)
 ![](https://i.ibb.co/Yds9Rh0/image.png)
+
+
+## 5 Программа (Создает рандомный массив рандомного размера и считает количество четных элементов)
+![](https://i.ibb.co/cy1F9Rg/image.png)
+![](https://i.ibb.co/5ks8Gkj/image.png)
+
+### 1 Тест 
+![](https://i.ibb.co/S5r11kN/image.png)
+
+### 2 Тест
+![](https://i.ibb.co/sbc0ZbC/image.png)
