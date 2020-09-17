@@ -1,10 +1,10 @@
-format PE console   ; Формат выхода
+format PE console   ; Г”Г®Г°Г¬Г ГІ ГўГ»ГµГ®Г¤Г 
 
-entry Start         ; Точка входа
+entry Start         ; Г’Г®Г·ГЄГ  ГўГµГ®Г¤Г 
 
 include 'win32a.inc'
 
-section '.data' data readable writable          ; Секция со всеми нужными переменными и символами
+section '.data' data readable writable          ; Г‘ГҐГЄГ¶ГЁГї Г±Г® ГўГ±ГҐГ¬ГЁ Г­ГіГ¦Г­Г»Г¬ГЁ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Г¬ГЁ ГЁ Г±ГЁГ¬ГўГ®Г«Г Г¬ГЁ
 
         strA db 'Enter A: ', 0
         strB db 'Enter B: ', 0
@@ -25,29 +25,29 @@ section '.data' data readable writable          ; Секция со всеми нужными переме
 
         NULL = 0
 
-section '.code' code readable executable     ; Описание работы самой программы
+section '.code' code readable executable     ; ГЋГЇГЁГ±Г Г­ГЁГҐ Г°Г ГЎГ®ГІГ» Г±Г Г¬Г®Г© ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 
         Start:
-                push strA        ; Считывание первого числа
+                push strA        ; Г‘Г·ГЁГІГ»ГўГ Г­ГЁГҐ ГЇГҐГ°ГўГ®ГЈГ® Г·ГЁГ±Г«Г 
                 call [printf]
 
                 push A
                 push spaceStr
                 call [scanf]
 
-                push strB        ; Считывание второго числа
+                push strB        ; Г‘Г·ГЁГІГ»ГўГ Г­ГЁГҐ ГўГІГ®Г°Г®ГЈГ® Г·ГЁГ±Г«Г 
                 call [printf]
 
                 push B
                 push spaceStr
                 call [scanf]
 
-                push strOp       ; Считывание операции +, -, *, / или %
+                push strOp       ; Г‘Г·ГЁГІГ»ГўГ Г­ГЁГҐ Г®ГЇГҐГ°Г Г¶ГЁГЁ +, -, *, / ГЁГ«ГЁ %
                 call [printf]
 
                 call [getch]
 
-                cmp eax, 43  ; сумма
+                cmp eax, 43  ; Г±ГіГ¬Г¬Г 
                 jne notAdd
                     mov ecx, [A]
                     add ecx, [B]
@@ -59,7 +59,7 @@ section '.code' code readable executable     ; Описание работы самой программы
                     jmp finish
                 notAdd:
 
-                cmp eax, 45  ; разность
+                cmp eax, 45  ; Г°Г Г§Г­Г®Г±ГІГј
                 jne notSub
                     mov ecx, [A]
                     sub ecx, [B]
@@ -71,7 +71,7 @@ section '.code' code readable executable     ; Описание работы самой программы
                     jmp finish
                 notSub:
 
-                cmp eax, 42  ; Умножение
+                cmp eax, 42  ; Г“Г¬Г­Г®Г¦ГҐГ­ГЁГҐ
                 jne notMul
                     mov ecx, [A]
                     imul ecx, [B]
@@ -82,7 +82,7 @@ section '.code' code readable executable     ; Описание работы самой программы
 
                     jmp finish
                 notMul:
-                cmp eax, 37  ; Деление mod
+                cmp eax, 37  ; Г„ГҐГ«ГҐГ­ГЁГҐ mod
                 jne notMod
                     mov eax, [A]
                     mov ecx, [B]
@@ -96,7 +96,7 @@ section '.code' code readable executable     ; Описание работы самой программы
                     call [printf]
 
                     jmp finish
-                    notNullDiv: ; Деление не на ноль
+                    notNullDiv: ; Г„ГҐГ«ГҐГ­ГЁГҐ Г­ГҐ Г­Г  Г­Г®Г«Гј
 
                     div ecx
                     mov [C], edx
@@ -116,7 +116,7 @@ section '.code' code readable executable     ; Описание работы самой программы
                     jmp finish
                 notMod:
 
-                cmp eax, 47         ; Деление div
+                cmp eax, 47         ; Г„ГҐГ«ГҐГ­ГЁГҐ div
                 jne finish
                     mov eax, [A]
                     mov ecx, [B]
@@ -130,7 +130,7 @@ section '.code' code readable executable     ; Описание работы самой программы
                     call [printf]
 
                     jmp finish
-                    notNullDiv1:   ; Деление не на ноль
+                    notNullDiv1:   ; Г„ГҐГ«ГҐГ­ГЁГҐ Г­ГҐ Г­Г  Г­Г®Г«Гј
 
                     div ecx
                     mov [C], edx
@@ -167,7 +167,7 @@ section '.code' code readable executable     ; Описание работы самой программы
                 call [ExitProcess]
 
 
-section '.idata' import data readable        ; Секция с импортом библиотек
+section '.idata' import data readable        ; Г‘ГҐГЄГ¶ГЁГї Г± ГЁГ¬ГЇГ®Г°ГІГ®Г¬ ГЎГЁГЎГ«ГЁГ®ГІГҐГЄ
 
         library kernel, 'kernel32.dll',\
                 msvcrt, 'msvcrt.dll'
