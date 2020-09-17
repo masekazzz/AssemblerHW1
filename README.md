@@ -1,5 +1,5 @@
 # AssemblerHW1
-## 1 программа
+## 1 программа (Калькулятор)
 ![](https://i.ibb.co/0j1cNjg/image.png)
 ![](https://i.ibb.co/vcwhPmV/image.png)
 ![](https://i.ibb.co/ZNFHMwC/image.png)
@@ -24,8 +24,23 @@
 ![](https://i.ibb.co/yS30LTr/image.png)
 
 
-## 2 Программа
+## 2 Программа (Hello World!)
 ![](https://i.ibb.co/2gyhNYd/image.png)
 
 ### Результат выполнения
 ![](https://i.ibb.co/FJRTSGg/image.png)
+
+
+## 3 Программа (Приветствие и вычисление года рождения)
+![](https://i.ibb.co/gWXLd7T/image.png)
+![](https://i.ibb.co/r4Jzq4w/image.png)
+![](https://i.ibb.co/XVD9STQ/image.png)
+
+### 1 Тест 
+![](https://i.ibb.co/s6JYjhn/image.png)
+
+### 2 Тест
+![](https://i.ibb.co/xq91BsP/image.png)
+
+
+## 4 Программа
